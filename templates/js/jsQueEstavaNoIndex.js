@@ -1,8 +1,3 @@
-// Código no começo do index.html, acho que para puxar uma imagem para a tela inicial
-jQuery(window).on('load', function () {
-    new JCaption('img.caption');
-});
-
 // Código que acredito ser para funcionar com o Google analitcs
 window.dataLayer = window.dataLayer || [];
 function gtag() {
@@ -12,8 +7,7 @@ gtag('js', new Date());
 gtag('config', 'UA-92072355-1');
 
 // Código usado para o banner
-jQuery.noConflict();
-jQuery(window).load(function () {
+jQuery(window).on('load', function () {
     jQuery('#vt_nivo_slider94').nivoSlider({
     effect: 'fold', // Specify sets like: 'fold,fade,sliceDown'
     slices: 15, // For slice animations

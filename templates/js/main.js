@@ -54,7 +54,9 @@ jQuery(function($) {
     });
 
     //Tooltip
-    $('[data-toggle="tooltip"]').tooltip();
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    new bootstrap.Tooltip(el);});
+
 
     $(document).on('click', '.sp-rating .star', function(event) {
         event.preventDefault();
