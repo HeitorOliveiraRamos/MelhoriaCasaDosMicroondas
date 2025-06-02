@@ -1,197 +1,158 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fale Conosco - Conserto de Micro-ondas</title>
+  <style>
+    :root {
+      --laranja: #f57c00;
+      --laranja-claro: #ffcc80;
+      --branco: #ffffff;
+      --cinza: #eeeeee;
+      --sombra: rgba(0, 0, 0, 0.1);
+    }
 
-    <title>Casa do Microondas - Conserto de Microondas em Curitiba</title>
-    <meta name="author" content="Super User">
-    <meta name="generator" content="Joomla! - Open Source Content Management">
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--laranja), var(--laranja-claro));
+      color: #333;
+    }
 
-    <!-- Favicon -->
-    <link rel="icon" href="../images/site/favicon.png" type="image/png">
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: var(--branco);
+      border-radius: 20px;
+      box-shadow: 0 15px 30px var(--sombra);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    .left {
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8a5b296f60?auto=format&fit=crop&w=500&q=80') no-repeat center center;
+      background-size: cover;
+    }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../templates/casadomicroondascuritiba/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../templates/casadomicroondascuritiba/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../templates/casadomicroondascuritiba/css/legacy.css">
-    <link rel="stylesheet" href="../templates/casadomicroondascuritiba/css/template.css">
-    <link rel="stylesheet" href="../templates/casadomicroondascuritiba/css/presets/preset1.css">
-    <link rel="stylesheet" href="../templates/casadomicroondascuritiba/css/frontend-edit.css">
+    .right {
+      padding: 3rem;
+    }
 
-    <style>
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Open Sans', sans-serif;
-        }
-        h1 { font-weight: 800; }
-        h2, h5, h6 { font-weight: 600; }
-        h3, h4 { font-weight: normal; }
+    h1 {
+      margin-bottom: 1rem;
+      color: var(--laranja);
+      font-size: 2rem;
+    }
 
-        #sp-top-bar {
-            background-color: #fff;
-            color: #999;
-        }
-        #sp-modulos {
-            margin: 10px 20px;
-        }
-    </style>
+    p {
+      margin-bottom: 2rem;
+    }
 
-    <!-- Scripts Externos -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    form {
+      display: flex;
+      flex-direction: column;
+    }
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92072355-1"></script>
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
 
-    <!-- Scripts do projeto -->
-    <script src="../templates/js/jquery.sticky.js"></script>
-    <script src="../templates/js/frontend-edit.js"></script>
-    <script src="../templates/js/jquery.nivo.slider.min.js"></script>
-    <script src="../templates/js/jsQueEstavaNoIndex.js"></script>
-    <script src="../templates/js/main.js"></script>
-    <script src="../templates/js/caption.js"></script>
+    input, textarea, select {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background-color: var(--laranja);
+      color: var(--branco);
+      border: none;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e65100;
+    }
+
+    .whatsapp-btn {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .whatsapp-btn a {
+      background-color: #25d366;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-btn a:hover {
+      background-color: #1ebd5b;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .left {
+        height: 200px;
+      }
+    }
+  </style>
 </head>
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="right">
+      <h1>Fale Conosco</h1>
+      <p>Tem dúvidas? Precisa de ajuda? Envie uma mensagem e responderemos rapidamente!</p>
+      <form action="#" method="POST">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" required />
 
-<body class="site">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
 
-<div class="body-innerwrapper">
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
 
-    <!-- Topo -->
-    <section id="sp-top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <a href="../index.html" title="Casa do Microondas Curitiba">
-                        <img src="../images/site/casa-microondas-curitiba.jpg" alt="Casa do Microondas Curitiba">
-                    </a>
-                </div>
-                <div class="col-md-6 text-center">
-                    <a href="../index.html" title="Conserto de Microondas Curitiba">
-                        <img src="../images/site/conserto-microondas-curitiba.jpg" alt="Conserto de Microondas Curitiba">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto">
+          <option value="orcamento">Solicitar orçamento</option>
+          <option value="duvida">Dúvida técnica</option>
+          <option value="outros">Outros</option>
+        </select>
 
-    <!-- Menu -->
-    <header id="sp-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="sp-megamenu-wrapper">
-                        <a class="visible-xs" href="#" id="offcanvas-toggler"><i class="fa fa-bars"></i></a>
-                        <ul class="sp-megamenu-parent menu-fade hidden-xs">
-                            <li><a href="../index.html">Home</a></li>
-                            <li><a href="sobre-nós.html">Localização</a></li>
-                            <li><a href="fotos.html">Fotos</a></li>
-                            <li><a href="envie-seus-dados.html">Busca e Entrega</a></li>
-                            <li><a href="para-conserto-em-30-minutos-clique-aqui.html">Conserto em 30 minutos</a></li>
-                            <li class="current-item active"><a href="contato.html">Contato</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
 
-    <!-- Módulos -->
-    <section id="sp-modulos">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-2"><a href="conserto-de-microondas.html"><img src="../images/site/conserto-curitiba.jpg" alt="Conserto de microondas em Curitiba"></a></div>
-                <div class="col-md-2"><a href="conserto-de-forno-elétrico.html"><img src="../images/site/conserto-forno-eletrico-curitiba.jpg" alt="Conserto de forno elétrico"></a></div>
-                <div class="col-md-2"><a href="reforma-de-microondas.html"><img src="../images/site/reformas.jpg" alt="Reformas de microondas em Curitiba"></a></div>
-                <div class="col-md-2"><a href="acessórios.html"><img src="../images/site/acessorio-microondas.jpg" alt="Acessórios microondas Curitiba"></a></div>
-                <div class="col-md-2"><a href="microondas-novos-e-usados.html"><img src="../images/site/novosusados.jpg" alt="Microondas novos e usados"></a></div>
-                <div class="col-md-2"><a href="serviço-de-busca-e-entrega.html"><img src="../images/site/busca-entrega.jpg" alt="Serviço de busca e entrega"></a></div>
-            </div>
-        </div>
-    </section>
+        <button type="submit">Enviar mensagem</button>
+      </form>
 
-    <!-- Conteúdo -->
-    <main id="sp-main-body">
-        <div class="container">
-            <article>
-                <header class="page-header">
-                    <h1>Dúvidas - Orçamentos - Contato</h1>
-                    <h2>Preencha o formulário abaixo</h2>
-                </header>
-
-                <p class="text-center">Entre em contato através de nosso formulário. Retornaremos o mais breve possível!</p>
-
-                <form id="form1" name="form1" onsubmit="return ficha();" method="post">
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="assunto">Assunto:</label>
-                        <input type="text" id="assunto" name="assunto" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" class="form-control" required></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="soma">Anti Spam - 1 + 1 =</label>
-                        <select id="soma" name="soma" class="form-control" required>
-                            <option value="">Selecione...</option>
-                            <option value="2">2</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </article>
-        </div>
-    </main>
-
-    <!-- Rodapé -->
-    <footer id="sp-footer" class="text-center">
-        <div class="container">
-            <span>&copy; Casa do Microondas em Curitiba - Conserto de Microondas Curitiba. <br>
-                Implantado e Customizado por <a href="https://www.emersonsites.com.br" target="_blank" rel="noopener noreferrer">Emerson Sites e Sistemas</a></span>
-        </div>
-    </footer>
-
-    <!-- Menu Mobile -->
-    <div class="offcanvas-menu">
-        <a class="close-offcanvas" href="#"><i class="fa fa-remove"></i></a>
-        <div class="offcanvas-inner">
-            <nav>
-                <h3>Menu Principal</h3>
-                <ul class="nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="sobre-nós.html">Localização</a></li>
-                    <li><a href="fotos.html">Fotos</a></li>
-                    <li><a href="envie-seus-dados.html">Busca e Entrega</a></li>
-                    <li><a href="para-conserto-em-30-minutos-clique-aqui.html">Conserto em 30 minutos</a></li>
-                    <li class="active"><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="whatsapp-btn">
+        <p>Ou, se preferir, fale agora mesmo pelo WhatsApp:</p>
+        <a href="https://wa.me/5599999999999" target="_blank">📞 Conversar no WhatsApp</a>
+      </div>
     </div>
-
-</div>
-
-<script src="../templates/js/contato.js"></script>
+  </div>
 </body>
 </html>
