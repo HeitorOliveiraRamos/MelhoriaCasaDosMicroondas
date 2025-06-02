@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fale Conosco - Conserto de Micro-ondas</title>
+  <style>
+    :root {
+      --laranja: #f57c00;
+      --laranja-claro: #ffcc80;
+      --branco: #ffffff;
+      --cinza: #eeeeee;
+      --sombra: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--laranja), var(--laranja-claro));
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: var(--branco);
+      border-radius: 20px;
+      box-shadow: 0 15px 30px var(--sombra);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .left {
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8a5b296f60?auto=format&fit=crop&w=500&q=80') no-repeat center center;
+      background-size: cover;
+    }
+
+    .right {
+      padding: 3rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      color: var(--laranja);
+      font-size: 2rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background-color: var(--laranja);
+      color: var(--branco);
+      border: none;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e65100;
+    }
+
+    .whatsapp-btn {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .whatsapp-btn a {
+      background-color: #25d366;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-btn a:hover {
+      background-color: #1ebd5b;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .left {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="right">
+      <h1>Fale Conosco</h1>
+      <p>Tem dúvidas? Precisa de ajuda? Envie uma mensagem e responderemos rapidamente!</p>
+      <form action="#" method="POST">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
+
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto">
+          <option value="orcamento">Solicitar orçamento</option>
+          <option value="duvida">Dúvida técnica</option>
+          <option value="outros">Outros</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+      </form>
+
+      <div class="whatsapp-btn">
+        <p>Ou, se preferir, fale agora mesmo pelo WhatsApp:</p>
+        <a href="https://wa.me/5599999999999" target="_blank">📞 Conversar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
