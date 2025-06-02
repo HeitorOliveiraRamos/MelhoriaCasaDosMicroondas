@@ -28,10 +28,4 @@ function ficha() {
         document.form1.mensagem.focus();
         return false;
     }
-
-    if (document.form1.soma.value === "") {
-        alert('Esqueceu o valor da soma!');
-        document.form1.soma.focus();
-        return false;
-    }
 }
