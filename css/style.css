@@ -107,3 +107,45 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
 }
+
+.contato-container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button.btn-primary {
+    background-color: var(--laranja-principal);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #e65100;
+}
+
+.mapa-frame {
+    width: 100%;
+    min-height: 350px;
+    border: 0;
+}
+
+.whatsapp-btn a {
+    background-color: #25d366;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.whatsapp-btn a:hover {
+    background-color: #1ebd5b;
+}

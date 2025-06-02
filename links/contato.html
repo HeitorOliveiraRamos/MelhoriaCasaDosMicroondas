@@ -4,155 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fale Conosco - Conserto de Micro-ondas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css" />
   <style>
-    :root {
-      --laranja: #f57c00;
-      --laranja-claro: #ffcc80;
-      --branco: #ffffff;
-      --cinza: #eeeeee;
-      --sombra: rgba(0, 0, 0, 0.1);
+    body {
+      background-color: #f8f9fa;
     }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, var(--laranja), var(--laranja-claro));
+    h1, h2 {
       color: #333;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 3rem auto;
-      background: var(--branco);
-      border-radius: 20px;
-      box-shadow: 0 15px 30px var(--sombra);
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .left {
-      background: url('https://images.unsplash.com/photo-1581090700227-1e8a5b296f60?auto=format&fit=crop&w=500&q=80') no-repeat center center;
-      background-size: cover;
-    }
-
-    .right {
-      padding: 3rem;
-    }
-
-    h1 {
-      margin-bottom: 1rem;
-      color: var(--laranja);
-      font-size: 2rem;
-    }
-
-    p {
-      margin-bottom: 2rem;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
     label {
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-
-    input, textarea, select {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
+      font-weight: 500;
     }
 
     textarea {
       resize: vertical;
-      min-height: 100px;
-    }
-
-    button {
-      background-color: var(--laranja);
-      color: var(--branco);
-      border: none;
-      padding: 1rem;
-      font-size: 1.1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #e65100;
-    }
-
-    .whatsapp-btn {
-      margin-top: 1rem;
-      text-align: center;
-    }
-
-    .whatsapp-btn a {
-      background-color: #25d366;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s;
-    }
-
-    .whatsapp-btn a:hover {
-      background-color: #1ebd5b;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-
-      .left {
-        height: 200px;
-      }
     }
   </style>
 </head>
 <body>
+<section id="sp-modulos">
   <div class="container">
-    <div class="left"></div>
-    <div class="right">
-      <h1>Fale Conosco</h1>
-      <p>Tem dúvidas? Precisa de ajuda? Envie uma mensagem e responderemos rapidamente!</p>
+    <a href="contato.html" title="Conserto de microondas em Curitiba">
+      <img src="../images/site/conserto-curitiba.jpg" alt="Conserto de microondas em Curitiba">
+    </a>
+    <a href="contato.html" title="Conserto de forno elétrico">
+      <img src="../images/site/conserto-forno-eletrico-curitiba.jpg" alt="Conserto de forno elétrico">
+    </a>
+    <a href="contato.html" title="Reformas de microondas em Curitiba">
+      <img src="../images/site/reformas.jpg" alt="Reformas de microondas em Curitiba">
+    </a>
+    <a href="../index.html" title="Acessórios microondas Curitiba">
+      <img src="../images/site/acessorio-microondas.jpg" alt="Acessórios microondas Curitiba">
+    </a>
+    <a href="../index.html" title="Microondas novos e usados">
+      <img src="../images/site/novosusados.jpg" alt="Microondas novos e usados">
+    </a>
+    <a href="../index.html" title="Serviço de busca e entrega">
+      <img src="../images/site/busca-entrega.jpg" alt="Serviço de busca e entrega">
+    </a>
+  </div>
+</section>
+<div class="container my-5 bg-white rounded-4 shadow p-5">
+  <h1 class="mb-4 text-center">Fale Conosco</h1>
+
+  <div class="row g-5">
+    <!-- Coluna dos mapas -->
+    <div class="col-md-6">
+      <h5>Avenida Presidente Kennedy 410, Rebouças - Curitiba</h5>
+      <iframe
+              src="https://www.google.com/maps/embed?pb=..."
+              width="100%"
+              height="250"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              class="rounded-3 mb-4">
+      </iframe>
+
+      <h5>Rua Saturnino Miranda, 84 - Santa Felicidade - Curitiba</h5>
+      <iframe
+              src="https://maps.google.com.br/maps?f=q&amp;q=Rua+Saturnino+Miranda..."
+              width="100%"
+              height="250"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              class="rounded-3">
+      </iframe>
+    </div>
+
+    <!-- Coluna do formulário -->
+    <div class="col-md-6">
       <form action="#" method="POST">
-        <label for="nome">Seu nome</label>
-        <input type="text" id="nome" name="nome" required />
+        <div class="mb-3">
+          <label for="nome" class="form-label">Seu nome</label>
+          <input type="text" id="nome" name="nome" class="form-control" required />
+        </div>
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required />
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" id="email" name="email" class="form-control" required />
+        </div>
 
-        <label for="telefone">Telefone</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
+        <div class="mb-3">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000" />
+        </div>
 
-        <label for="assunto">Assunto</label>
-        <select id="assunto" name="assunto">
-          <option value="orcamento">Solicitar orçamento</option>
-          <option value="duvida">Dúvida técnica</option>
-          <option value="outros">Outros</option>
-        </select>
+        <div class="mb-3">
+          <label for="assunto" class="form-label">Assunto</label>
+          <select id="assunto" name="assunto" class="form-select">
+            <option value="orcamento">Solicitar orçamento</option>
+            <option value="duvida">Dúvida técnica</option>
+            <option value="outros">Outros</option>
+          </select>
+        </div>
 
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" class="form-control" required></textarea>
+        </div>
 
-        <button type="submit">Enviar mensagem</button>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-lg">Enviar mensagem</button>
+        </div>
       </form>
-
-      <div class="whatsapp-btn">
-        <p>Ou, se preferir, fale agora mesmo pelo WhatsApp:</p>
-        <a href="https://wa.me/5599999999999" target="_blank">📞 Conversar no WhatsApp</a>
-      </div>
     </div>
   </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
