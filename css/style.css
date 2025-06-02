@@ -4,108 +4,157 @@
     --cinza-claro: #f5f5f5;
     --cinza-escuro: #424242;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 body {
     background-color: var(--cinza-claro);
     color: var(--cinza-escuro);
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
+
 #sp-top-bar {
     background-color: #fff;
     color: #999;
     padding: 1rem 0;
 }
+
 #sp-top-bar .container {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
+
 #sp-top-bar img {
     max-width: 200px;
     height: auto;
 }
+
 header {
-    background-color: var(--laranja-principal);
+    background: linear-gradient(90deg, var(--laranja-principal), var(--laranja-claro));
     color: white;
-    padding: 2rem;
+    padding: 3rem 1rem;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 header h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
+
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
 }
+
 .cta {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
+
 .cta a {
     background-color: white;
     color: var(--laranja-principal);
-    padding: 0.8rem 1.5rem;
+    padding: 0.9rem 1.8rem;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
 }
+
+.cta a:hover {
+    background-color: var(--laranja-claro);
+    color: white;
+    transform: scale(1.05);
+}
+
 section {
-    padding: 2rem 1rem;
-    max-width: 1000px;
+    padding: 2.5rem 1rem;
+    max-width: 1100px;
     margin: auto;
 }
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
+
 .card {
     background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s;
 }
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
 .card h3 {
     color: var(--laranja-principal);
+    margin-bottom: 0.5rem;
 }
+
 .cta-section {
     text-align: center;
     background-color: var(--laranja-claro);
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
+    border-radius: 0 0 30px 30px;
 }
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--cinza-escuro);
+}
+
 #sp-modulos {
     background: #fff;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
+
 #sp-modulos .container {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
+
 #sp-modulos a img {
-    max-width: 120px;
+    max-width: 140px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s;
 }
+
 #sp-modulos a img:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
 }
+
 footer {
     background-color: var(--cinza-escuro);
     color: white;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 1.2rem; /* Mantido o padding do segundo bloco, que é ligeiramente diferente */
+    font-size: 0.95rem; /* Mantido o font-size do segundo bloco */
+    margin-top: 2rem; /* Mantido o margin-top do segundo bloco */
+    border-top: 4px solid var(--laranja-principal); /* Mantido o border-top do segundo bloco */
 }
 
 .contato-container {
@@ -148,4 +197,12 @@ button.btn-primary:hover {
 
 .whatsapp-btn a:hover {
     background-color: #1ebd5b;
+    /* As propriedades abaixo estavam no segundo bloco e parecem ser específicas para o hover do botão do WhatsApp,
+       diferente do .cta a:hover. Se a intenção era um estilo diferente para o footer,
+       seria melhor criar uma classe específica ou ajustar o seletor.
+       Por hora, mantive as propriedades do segundo bloco, pois são mais específicas. */
+    padding: 1.2rem;
+    font-size: 0.95rem;
+    margin-top: 2rem;
+    border-top: 4px solid var(--laranja-principal);
 }
